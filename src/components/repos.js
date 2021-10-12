@@ -2,7 +2,7 @@ import React from 'react'
 import Repo from './repo'
 function Repos() {
     return (
-        <div>
+        <div className="repos">
             <Repo />
         </div>
     )

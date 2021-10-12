@@ -12,15 +12,15 @@ const Repo = () => (
     <div className="repo-utils">
     <div className="subitem">
         <i className="fa fa-code" />
-        <span></span>
+        <span>JavaScript</span>
       </div>
       <div className="subitem">
         <i className="fa fa-star" />
-        <span></span>
+        <span>10</span>
       </div>
       <div className="subitem">
         <i className="fa fa-code-fork" />
-        <span></span>
+        <span>10</span>
       </div>
     </div>
 </div>
