@@ -134,3 +134,50 @@ background-color: bisque;
   color: black;
   text-align: center;
 }
+
+.react-modal{
+  position: absolute;
+  top:200px;
+  bottom:200px;
+  left:30%;
+  right:30%;
+  background:#fff;
+  border:2px solid black;
+  padding:20px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 10px;
+  
+}
+
+.react-modal > h2{
+  text-align: center;
+}
+
+.modal-col{
+  display: flex;
+  flex-direction: column;
+  margin-top:20px;
+}
+
+.modal-col > label{
+  font-size: 20px;
+  margin-top:5px;
+}
+
+.modal-col > input[type="text"]{
+height:30px;
+margin-top:5px;
+}
+
+
+.modal-col > button{
+  color: #fff;
+  background-color: black;
+  margin-top: 20px;
+  height:40px;
+  font-size: 20px;
+  width:40%;
+  align-self:center
+
+}
