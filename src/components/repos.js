@@ -1,11 +1,17 @@
 import React from 'react'
 import Repo from './repo'
-function Repos() {
+const Repos = ({value}) => {
+    
     return (
         <div className="repos">
-            <Repo />
+            {
+            value.map((info) => (
+                 <Repo value={info} />   
+            ))
+            }
         </div>
     )
 }
 
 export default Repos
+

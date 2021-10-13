@@ -4,11 +4,9 @@ import Application from './Application';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" component={Application} />
-        </Switch>
-    </BrowserRouter>
+  
+        <Application />
+  
   );
 }
 

@@ -2,6 +2,7 @@
 background-color: black;
 padding:15px;
 text-align: center;
+height:60px;
 }
 
 .head > p{
@@ -16,17 +17,20 @@ text-align: center;
 
 .left{
   padding:0;
-  height:calc(100vh - 56.4px);
+  height:calc(100vh - 60px);
   border-right: 3px solid black;
 }
 
 .right{
   padding: 20px;
+  border-left:2px solid black;
+  height:calc(100vh - 60px);
+
 }
 
 .repos{
   overflow-y: scroll;
-  height:calc(100vh - 120px);
+  height:calc(100vh - 140px);
 }
 
 .repos::-webkit-scrollbar{
@@ -46,6 +50,7 @@ text-align: center;
 
 .repo-body{
   border-bottom: 2px solid black;
+  border-top:2px solid black;
   padding:5px;
 }
 
@@ -61,6 +66,10 @@ background-color: bisque;
 
 .repo-add{
   margin-left:20px;
+  border-radius: 50%;
+  border:1px solid orange;
+  position: absolute;
+  bottom: 0;
 }
 
 .fa-plus{
@@ -154,24 +163,25 @@ background-color: bisque;
   text-align: center;
 }
 
-.modal-col{
+.react-modal > form{
   display: flex;
   flex-direction: column;
   margin-top:20px;
 }
 
-.modal-col > label{
+
+.react-modal > form >  label{
   font-size: 20px;
   margin-top:5px;
 }
 
-.modal-col > input[type="text"]{
+.react-modal > form > input[type="text"]{
 height:30px;
 margin-top:5px;
 }
 
 
-.modal-col > button{
+.react-modal > form >  button{
   color: #fff;
   background-color: black;
   margin-top: 20px;
