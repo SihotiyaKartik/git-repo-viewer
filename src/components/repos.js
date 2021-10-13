@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 import Repo from './repo'
-const Repos = ({value}) => {
+function Repos(props){
 
-
+    const handle = (e) => {
+        props.leftCallBack(e);
+    }
     
     return (
         <div className="repos">
             {
-            value.map((info) => (
-                 <Repo value={info} />   
+            props.value.map((info) => (
+                 <Repo value={info} reposCallBack={handle} />   
             ))
             }
         </div>

@@ -6,7 +6,7 @@ import Repos from './repos';
 import { getUserRepo } from '../Api/api';
 
 
-const LeftPanel = () => {
+function LeftPanel(props){
 
     const [data,updateData] = useState([]);
     const [username,setUsername] = useState("");
@@ -37,11 +37,15 @@ const LeftPanel = () => {
         
     };
 
+    const handle = (e) => {
+        props.mainCallBack(e);
+    }
+
 
     return (
         <div>
             <>
-            {data[0] ? (<Repos value={data} />) : (<></>)}
+            {data[0] ? (<Repos value={data} leftCallBack={handle} />) : (<></>)}
             </>
 
             <button onClick={openModal} className="repo-add"><i className="fa fa-plus"></i></button>

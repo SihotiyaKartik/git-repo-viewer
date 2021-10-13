@@ -7,5 +7,15 @@ export async function getUserRepo(userName,userRepo){
     return res
 }
 
+export async function getBranch(detail){
+    const res = await axios.get(`${url}/${detail}/branches`);
+    return res;
+}
+
+export async function getIssue(detail){
+    const res = await axios.get(`${url}/${detail}/issues`);
+    return res;
+}
+
 
 

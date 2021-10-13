@@ -1,11 +1,13 @@
 import React from 'react'
 
 function Repo(props){
-
+const Trigger = () => {
+  props.reposCallBack(props.value.data.full_name);
+}
 
 return(
 
-  <div className="repo-body" >
+  <div className="repo-body" onClick={Trigger}>
   <div className="repo-name">
       <p>{props.value.data.name}</p>
   </div>

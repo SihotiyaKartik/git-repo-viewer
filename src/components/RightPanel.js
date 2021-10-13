@@ -1,12 +1,13 @@
 import React from 'react'
 import Tabs from './Tabs'
-function RightPanel() {
+function RightPanel(props) {
+    
     return (
         <div className="right">
             <div className="delete">
                 <p>Delete</p>
             </div>
-            <Tabs />
+            <Tabs value={props.value} />
         </div>
     )
 }
