@@ -14,6 +14,9 @@ function Tabs() {
                     <a href="#">Commits</a>
                 </li>
             </ul>
+            <div className="right-main">
+            
+            </div>
         </div>
     )
 }

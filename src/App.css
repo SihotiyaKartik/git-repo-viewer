@@ -54,8 +54,10 @@ height:60px;
   padding:5px;
 }
 
+
+
 .repo-body:hover{
-background-color: bisque;
+   background-color: bisque;
 }
 
 .repo-utils{
@@ -96,27 +98,10 @@ background-color: bisque;
   font-size: 20px;
 }
 
-.tabs{
-  overflow-y: scroll;
-}
 
-.tabs::-webkit-scrollbar{
-  width:5px;
-}
-
-.tabs::-webkit-scrollbar-track{
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-
-.tabs::-webkit-scrollbar-thumb{
-  background-color: darkgrey;
-  outline: 1px solid slategray;
-  border-radius: 40px;
-}
 
 .tabs > ul{
   display: flex;
-  
   border:2px solid black;
 }
 
@@ -190,4 +175,26 @@ margin-top:5px;
   width:40%;
   align-self:center
 
+}
+
+.right-main{
+  margin-top:-17px;
+  border:2px solid black;
+  height:500px;
+  overflow-y: scroll;
+}
+
+
+.right-main::-webkit-scrollbar{
+  width:5px;
+}
+
+.right-main::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.right-main::-webkit-scrollbar-thumb{
+  background-color: darkgrey;
+  outline: 1px solid slategray;
+  border-radius: 40px;
 }
