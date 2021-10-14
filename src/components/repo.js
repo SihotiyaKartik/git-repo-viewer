@@ -3,11 +3,10 @@ import { useState } from 'react/cjs/react.development'
 
 function Repo(props){
  
-
+  
   const Trigger = () => {
   props.reposCallBack(props.value.data.full_name);
-    
-}
+  }
 
 return(
 

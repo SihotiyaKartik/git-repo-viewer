@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Repo from './repo'
 function Repos(props){
 
+    
+
 
     const handle = (e) => {
         props.leftCallBack(e);
@@ -12,7 +14,7 @@ function Repos(props){
             {
             props.value.map((info) => (
                 
-                 <Repo className="active" index={props.value.indexOf(info)} value={info} reposCallBack={handle} />   
+                 <Repo index={props.value.indexOf(info)} value={info} reposCallBack={handle} />   
                 
             ))
             }
