@@ -2,8 +2,8 @@ import React from 'react'
 
 function Issue(props) {
     return (
-        <div>
-            
+        <div className="issue">
+          <p>{props.value.title}</p>  
         </div>
     )
 }

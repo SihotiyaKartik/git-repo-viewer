@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, {useState } from 'react'
-
+import Commits from './Commits';
 import Branches from './Branches';
-import Issue from './Issue';
+import Issues from './Issues';
 function Tabs(props) {
 
     const [b,setB] = useState(false);
@@ -10,6 +10,7 @@ function Tabs(props) {
     const [c,setC] = useState(false);
     const [branch,setBranch] = useState();
     const [issue,setIssue] = useState();
+    const [commit,setCommit] = useState();
     
     async function handleB(){
         setB(true);
@@ -24,14 +25,21 @@ function Tabs(props) {
         setB(false);
         setI(true);
         setC(false);
-        const data = axios.get(`https://api.github.com/repos/${props.value}/issues`);
+        const data = await axios.get(`https://api.github.com/repos/${props.value}/issues`);
         if(data){setIssue(data.data);}
+        
     }
 
     async function handleC(){
         setB(false);
         setI(false);
         setC(true);
+    }
+
+    const handle = async e => {
+        const data = await axios.get(`https://api.github.com/repos/${props.value}/commits?sha=${e}`);
+        if(data){setCommit(data.data)}
+        console.log(commit);
     }
 
     return (
@@ -48,8 +56,9 @@ function Tabs(props) {
                 </li>
             </ul>
             
-                {b && branch ? (<Branches value={branch} />):(<p>Hi</p>)}
-            
+                {b && branch ? (<Branches value={branch} tabsCallBack={handle} />):(<></>)}
+                {i && issue ? (<Issues value={issue} />):(<></>)}
+                {c && commit ? (<Commits value={commit} />):(<></>)}
         </div>
     )
 }

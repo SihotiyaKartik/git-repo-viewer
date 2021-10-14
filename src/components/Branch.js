@@ -1,9 +1,14 @@
 import React from 'react'
 
 function Branch(props) {
-    console.log(props.value);
+    
+    const trigger = () => {
+        props.branchesCallBack(props.value.name);
+    }
+
+
     return (
-        <div className="branch">
+        <div className="branch" onClick={trigger}>
             <p>{props.value.name}</p>
         </div>
     )
