@@ -17,6 +17,7 @@ function Tabs(props) {
         setI(false);
         setC(false);
         const data = await axios.get(`https://api.github.com/repos/${props.value}/branches`);
+        
         if(data){setBranch(data.data)}
         
     }
@@ -39,7 +40,7 @@ function Tabs(props) {
     const handle = async e => {
         const data = await axios.get(`https://api.github.com/repos/${props.value}/commits?sha=${e}`);
         if(data){setCommit(data.data)}
-        console.log(commit);
+        
     }
 
     return (

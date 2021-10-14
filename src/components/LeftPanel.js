@@ -45,10 +45,10 @@ function LeftPanel(props){
     return (
         <div>
             <>
-            {data[0] ? (<Repos value={data} leftCallBack={handle} />) : (<></>)}
+            <Repos value={data} leftCallBack={handle} />
             </>
-
-            <button onClick={openModal} className="repo-add"><i className="fa fa-plus"></i></button>
+            <div className="contain-plus">
+            <button onClick={openModal} className="repo-add"><i className="fa fa-plus fa-2x"></i></button>
             <Modal
             isOpen={open}
             onRequestClose={closeModal}
@@ -56,14 +56,15 @@ function LeftPanel(props){
             ariaHideApp={false}>
                 <h2>ADD NEW REPOSITORY</h2>    
                 <form>
-                <label htmlFor="name">Orgainization</label>    
+                <label htmlFor="name">Owner / Organization</label>    
                 <input type="text" id="name" onChange={updateName} required />
-                <label htmlFor="repo">Repository</label>
+                <label htmlFor="repo">Repository Name</label>
                 <input type="text" id="repo" required onChange={updateRepo} />
                 <button type="submit" onClick={handleSubmit}>ADD</button>   
                 </form>   
 
             </Modal>
+            </div>
         </div>
     )
 }

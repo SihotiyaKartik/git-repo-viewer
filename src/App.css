@@ -2,7 +2,7 @@
 background-color: black;
 padding:15px;
 text-align: center;
-height:60px;
+height:7vh;
 }
 
 .head > p{
@@ -17,20 +17,20 @@ height:60px;
 
 .left{
   padding:0;
-  height:calc(100vh - 60px);
+  height:93vh;
   border-right: 3px solid black;
 }
 
 .right{
   padding: 20px;
   border-left:2px solid black;
-  height:calc(100vh - 60px);
+  height:93vh;
 
 }
 
 .repos{
   overflow-y: scroll;
-  height:calc(100vh - 140px);
+  height:83vh;
 }
 
 .repos::-webkit-scrollbar{
@@ -50,14 +50,14 @@ height:60px;
 
 .repo-body{
   border-bottom: 2px solid black;
-  border-top:2px solid black;
-  padding:5px;
+  
+  padding:10px;
 }
 
-
-
-.repo-body:hover{
-   background-color: bisque;
+.active{
+  border-bottom: 2px solid black;
+  padding: 10px;
+  background-color: bisque;
 }
 
 .repo-utils{
@@ -66,52 +66,112 @@ height:60px;
   padding:0px 50px;
 }
 
-.repo-add{
-  margin-left:20px;
-  border-radius: 50%;
-  border:1px solid orange;
-  position: absolute;
-  bottom: 0;
+.repo-utils > .subitem > span{
+  font-size: 20px;
+} 
+
+.main-subitem{
+  display:flex;
+  justify-content: flex-start;
 }
 
-.fa-plus{
-  color:black;
-  padding:15px;
+.repo-name{
+  color: #0969da;
+  font-size: 22px;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.repo-type{
+  margin-left:20px;
+  align-self: center;
+}
+
+.repo-type > P{
+  border:2px solid rgb(240, 230, 230);
+  align-self: center;
+  border-radius: 10px;
+  padding:0 5px;
+  font-size: 15px;
+  
+}
+
+.repo-desc{
+  font-size: 18px;
+  overflow-wrap: break-word;
+}
+
+.fa-code{
+  color: red;
+  
+}
+.fa-star{
+  color: green;
+}
+
+
+
+.contain-plus{
+  height:10vh;
+  border-top:2px solid black;
+  background-color: rgb(198, 244, 250);
+}
+
+.repo-add{
+  
   border-radius: 50%;
-  border:2px solid orange;
-  background-color: peachpuff;
+  border:1px solid rgb(198,244,250);
+  position: relative;
+  top:15%;
+  left:5%;
+  background-color: rgb(198, 244, 250);  
+}
+
+
+.fa-plus{
+  color: black;
+  padding: 15px;
+  border-radius: 50%;
+    
 }
 
 .delete{
   width:100%;
-  padding:10px;
+  padding:8px;
   display: flex;
   justify-content: flex-end;
-  cursor: pointer;
+  height:10vh;
 }
 
 .delete > p{
-  padding:10px;
+  padding:8px;
   background-color: rgb(248, 132, 132);
   border:3px solid red;
   color: black;
   font-size: 20px;
+  cursor: pointer;  
+
 }
 
 
+.tabs{
+  height:calc(83vh - 40px);
+}
 
 .tabs > ul{
   display: flex;
   border:2px solid black;
+  padding-left:0px;
+  height:7vh;
 }
 
 .tabs > ul > li{
   list-style: none;
-  width:33.34%;
+  width:34%;
   padding:10px;
-  
   display: flex;
   justify-content: center;
+  background-color: greenyellow;
 }
 
 .tabs > ul > li:nth-child(1){
@@ -128,6 +188,7 @@ height:60px;
   color: black;
   text-align: center;
 }
+
 
 .react-modal{
   position: absolute;
@@ -157,12 +218,14 @@ height:60px;
 
 .react-modal > form >  label{
   font-size: 20px;
-  margin-top:5px;
+  margin-top:10px;
 }
 
 .react-modal > form > input[type="text"]{
-height:30px;
-margin-top:5px;
+height:40px;
+margin-top:10px;
+padding:10px;
+font-size: 20px;
 }
 
 
@@ -172,7 +235,7 @@ margin-top:5px;
   margin-top: 20px;
   height:40px;
   font-size: 20px;
-  width:40%;
+  width:30%;
   align-self:center
 
 }
@@ -196,25 +259,125 @@ margin-top:5px;
 .branches{
   margin-top:-17px;
   border:2px solid black;
-  height:500px;
+  height:calc(76vh - 40px);
   overflow-y: scroll;
 }
 
 .branch{
+  
   border-bottom: 2px solid black;
-  border-top:2px solid black;
-  padding:5px;
+  padding:10px;
+}
+.branch:hover{
+  background-color: rgb(240,240,240);
+}
+
+.branch > p{
+  font-size: 20px;
 }
 
 .issues{
   margin-top:-17px;
   border:2px solid black;
-  height:500px;
+  height:calc(76vh - 40px);
   overflow-y: scroll;
+
 }
 
 .issue{
   border-bottom: 2px solid black;
-  border-top:2px solid black;
-  padding:5px;
+  padding:10px;
+}
+
+.issue:hover{
+  background-color: rgb(240, 240, 240);
+}
+
+.issues::-webkit-scrollbar{
+  width:5px;
+}
+
+.issues::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.issues::-webkit-scrollbar-thumb{
+  background-color: darkgrey;
+  outline: 1px solid slategray;
+  border-radius: 40px;
+}
+
+.issue > p{
+  font-size: 20px;
+  font-weight:600;
+}
+
+.issue-item{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.issue-item .issue-item-p{
+  margin-left:5px;
+}
+
+.issue-item img{
+  border-radius: 50%;
+  margin-left:5px;
+}
+
+.commits{
+  margin-top:-17px;
+  border:2px solid black;
+  height:calc(76vh - 40px);
+  overflow-y: scroll;
+
+}
+
+.commits::-webkit-scrollbar{
+  width:5px;
+}
+
+.commits::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.commits::-webkit-scrollbar-thumb{
+  background-color: darkgrey;
+  outline: 1px solid slategray;
+  border-radius: 40px;
+}
+
+.commit{
+  padding:10px;
+  border-bottom: 2px solid black;
+}
+
+.commit:hover{
+  background-color: rgb(240,240,240);
+}
+
+.commit .date{
+font-weight: bolder;
+font-size: 20px;
+}
+
+.commit .msg{
+  font-size: 20px;
+  overflow-wrap: break-word;
+  color: #0969da;
+} 
+
+.commit-item{
+  display: flex;
+}
+
+.commit-item > img{
+  border-radius: 50%;
+  border:1px solid black;
+}
+
+.commit-item > p{
+  margin-left:10px;
+  font-size: 20px;
 }

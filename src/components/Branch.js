@@ -9,6 +9,7 @@ function Branch(props) {
 
     return (
         <div className="branch" onClick={trigger}>
+            
             <p>{props.value.name}</p>
         </div>
     )
