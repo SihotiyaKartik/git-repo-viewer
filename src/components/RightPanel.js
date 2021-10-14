@@ -5,8 +5,10 @@ function RightPanel(props) {
     return (
         <div className="right">
             <div className="delete">
-                <p className="title">{props.value}</p>
-                <p>Delete</p>
+                
+                {props.value ? (<p className="title">{props.value}</p>):(<></>)}
+                
+                
             </div>
             <Tabs value={props.value} />
         </div>
