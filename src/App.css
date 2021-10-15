@@ -183,9 +183,9 @@ height:7vh;
   border-right:2px solid black;
 }
 
-.tabs > ul > li > a{
+.tabs > ul > li > p{
   font-size: 20px;
-  text-decoration: none;
+  
   color: black;
   text-align: center;
 }

@@ -47,13 +47,13 @@ function Tabs(props) {
         <div className="tabs">
             <ul>
                 <li onClick={handleB}> 
-                    <a href="#">Branches</a>
+                    <p>Branches</p>
                 </li>
                 <li onClick={handleI}>
-                    <a href="#">Issues</a>
+                    <p>Issues</p>
                 </li>
                 <li onClick={handleC}>
-                    <a href="#">Commits</a>
+                    <p>Commits</p>
                 </li>
             </ul>
             
