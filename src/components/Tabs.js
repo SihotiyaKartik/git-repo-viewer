@@ -40,6 +40,7 @@ function Tabs(props) {
     const handle = async e => {
         const data = await axios.get(`https://api.github.com/repos/${props.value}/commits?sha=${e}`);
         if(data){setCommit(data.data)}
+        props.rightPanel(e);
         
     }
 
@@ -57,7 +58,7 @@ function Tabs(props) {
                 </li>
             </ul>
             
-                {b && branch ? (<Branches value={branch} tabsCallBack={handle} />):(<></>)}
+                {b && branch ? (<Branches value={branch} tabsCallBack={handle} />):(<div className="null-tab"></div>)}
                 {i && issue ? (<Issues value={issue} />):(<></>)}
                 {c && commit ? (<Commits value={commit} />):(<></>)}
         </div>

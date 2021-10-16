@@ -50,7 +50,7 @@ height:7vh;
 
 .repo-body{
   border-bottom: 2px solid black;
-  
+  cursor:pointer;
   padding:10px;
 }
 
@@ -173,6 +173,7 @@ height:7vh;
   display: flex;
   justify-content: center;
   background-color: greenyellow;
+  cursor: pointer;
 }
 
 .tabs > ul > li:nth-child(1){
@@ -262,6 +263,12 @@ font-size: 20px;
   border:2px solid black;
   height:calc(76vh - 40px);
   overflow-y: scroll;
+}
+
+.null-tab{
+  margin-top:-17px;
+  border:2px solid black;
+  height:calc(76vh - 40px);
 }
 
 .branch{
@@ -382,4 +389,5 @@ font-size: 20px;
   margin-left:10px;
   font-size: 20px;
 }
+
 
