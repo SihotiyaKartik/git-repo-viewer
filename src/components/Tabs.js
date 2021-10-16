@@ -57,10 +57,16 @@ function Tabs(props) {
                     <p>Commits</p>
                 </li>
             </ul>
-            
-                {b && branch ? (<Branches value={branch} tabsCallBack={handle} />):(<div className="null-tab"></div>)}
-                {i && issue ? (<Issues value={issue} />):(<></>)}
-                {c && commit ? (<Commits value={commit} />):(<></>)}
+                {(!b  && !i && !c) ? (<div className="null-tab"></div>):(
+                    <>
+                        {b && branch ? (<Branches value={branch} tabsCallBack={handle} />):(<></>)}
+                         {i && issue ? (<Issues value={issue} />):(<></>)}
+                        {c && commit ? (<Commits value={commit} />):(<></>)}
+
+                    </>
+
+                )}
+                
         </div>
     )
 }
