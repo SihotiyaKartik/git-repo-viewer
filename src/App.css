@@ -25,12 +25,14 @@ height:7vh;
   padding: 20px;
   border-left:2px solid black;
   height:93vh;
+  background-color: #ddecfc;
 
 }
 
 .repos{
   overflow-y: scroll;
   height:83vh;
+  background-color: #ddecfc;
 }
 
 .repos::-webkit-scrollbar{
@@ -49,9 +51,18 @@ height:7vh;
 }
 
 .repo-body{
-  border-bottom: 2px solid black;
+  
+  
+  padding:15px;
+  background-color: #ddecfc;
+  
+}
+
+.repo-body-sub{
   cursor:pointer;
+  background-color: white;
   padding:10px;
+  border-radius: 10px;
 }
 
 .active{
@@ -116,14 +127,24 @@ height:7vh;
   
 }
 
+.contain-add{
+  background-color: #ddecfc;
+  height:100%;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .repo-add{
   
-  border-radius: 50%;
-  background-color: bisque;
-  border:2px solid orange;
-  position: relative;
-  top:15%;
-  left:5%;
+  color: white;
+  padding: 8px 40px;
+  border-radius: 13px;
+  background-color: black;
+  border:2px solid black;
+  font-size:25px;
     
 }
 
@@ -145,15 +166,18 @@ height:7vh;
 
 
 .delete > p{
-  padding:8px;
-  background-color: rgb(248, 132, 132);
-  border:3px solid red;
+  padding:10px;
+  background-color: white;
   color: black;
+  border:1px solid black;
+  border-radius: 10px;
   font-size: 20px;
-  cursor: pointer;  
-
+  cursor: pointer;
 }
 
+.delete > p:hover{
+background-color: blanchedalmond;
+}
 
 .tabs{
   height:calc(83vh - 40px);
@@ -196,9 +220,9 @@ height:7vh;
   position: absolute;
   top:200px;
   bottom:200px;
-  left:30%;
-  right:30%;
-  background:#fff;
+  left:35%;
+  right:35%;
+  background:#ddecfc;
   border:2px solid black;
   padding:20px;
   overflow: auto;
@@ -209,12 +233,21 @@ height:7vh;
 
 .react-modal > h2{
   text-align: center;
+  background-color: white;
+  width:80%;
+  padding:5px;
+  border-radius:10px;
+  margin:0px auto;
 }
 
 .react-modal > form{
   display: flex;
   flex-direction: column;
-  margin-top:20px;
+  margin-top:40px;
+  background-color: white;
+  border-radius: 10px;
+  padding:15px;
+  padding-bottom: 20px !important;
 }
 
 
@@ -228,8 +261,13 @@ height:40px;
 margin-top:10px;
 padding:10px;
 font-size: 20px;
+border-radius:5px;
+border:1px solid lightseagreen;
 }
 
+.react-modal > form > input[type="text"]:focus{
+  outline:none;
+}
 
 .react-modal > form >  button{
   color: #fff;
@@ -273,16 +311,19 @@ font-size: 20px;
 
 .branch{
   
-  border-bottom: 2px solid black;
+  background-color: #ddecfc;
   padding:10px;
 }
-.branch:hover{
-  background-color: rgb(240,240,240);
+
+.branch-sub{
+background-color: white;
+padding:10px;
+cursor: pointer;
+border-radius: 10px;
+font-size: 25px;
+
 }
 
-.branch > p{
-  font-size: 20px;
-}
 
 .issues{
   margin-top:-17px;
@@ -293,12 +334,16 @@ font-size: 20px;
 }
 
 .issue{
-  border-bottom: 2px solid black;
+  
   padding:10px;
 }
 
-.issue:hover{
-  background-color: rgb(240, 240, 240);
+.issue-sub{
+  background-color: white;
+  padding:10px;
+  cursor: pointer;
+  border-radius: 10px;
+  
 }
 
 .issues::-webkit-scrollbar{
@@ -315,7 +360,7 @@ font-size: 20px;
   border-radius: 40px;
 }
 
-.issue > p{
+.issue >.issue-sub> p{
   font-size: 20px;
   font-weight:600;
 }
@@ -358,12 +403,17 @@ font-size: 20px;
 
 .commit{
   padding:10px;
-  border-bottom: 2px solid black;
+  
 }
 
-.commit:hover{
-  background-color: rgb(240,240,240);
+.commit-sub{
+  background-color: white;
+  padding:10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
 }
+
+
 
 .commit .date{
 font-weight: bolder;

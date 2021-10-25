@@ -8,9 +8,10 @@ function Branch(props) {
 
 
     return (
-        <div className="branch" onClick={trigger}>
-            
-            <p>{props.value.name}</p>
+        <div className="branch">
+            <div className="branch-sub" onClick={trigger}>
+            {props.value.name}
+            </div>
         </div>
     )
 }

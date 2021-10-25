@@ -10,8 +10,8 @@ function Repo(props){
 
 return(
 
-  <div key={props.index} className="repo-body" onClick={Trigger}>
-  
+  <div key={props.index} className="repo-body" >
+  <div className="repo-body-sub" onClick={Trigger}>
   <div className="main-subitem">
   <div className="repo-name">
       <p>{props.value.data.name}</p>
@@ -37,6 +37,7 @@ return(
       <i className="fa fa-code-fork fa-lg" />
       <span>{props.value.data.forks}</span>
     </div>
+  </div>
   </div>
 </div>
 

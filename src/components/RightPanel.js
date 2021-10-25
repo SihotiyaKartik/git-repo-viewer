@@ -13,8 +13,8 @@ function RightPanel(props) {
         <div className="right">
             <div className="delete">
                 
-                {props.value ? (<p className="title">{props.value}</p>):(<></>)}
-                {props.branchValue ? (<p>{props.branchValue}</p>):(<></>)}
+                {props.value ? (<p className="delete-repo">{props.value}</p>):(<></>)}
+                {props.branchValue ? (<p className="delete-branch">{props.branchValue}</p>):(<></>)}
                 
             </div>
             <Tabs value={props.value} rightPanel={handle} />

@@ -48,7 +48,9 @@ function LeftPanel(props){
             <Repos value={data} leftCallBack={handle} />
             </>
             <div className="contain-plus">
-            <button onClick={openModal} className="repo-add"><i className="fa fa-plus "></i></button>
+            <div className="contain-add">
+            <button onClick={openModal} className="repo-add">ADD</button>
+            </div>
             <Modal
             isOpen={open}
             onRequestClose={closeModal}
