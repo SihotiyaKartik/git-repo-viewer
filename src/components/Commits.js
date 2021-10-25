@@ -10,7 +10,7 @@ function Commits(props) {
         <div className="commits">
             
             {props.value.map((info) => (
-                <Commit value={info} />
+                <Commit key={props.value.indexOf(info)} value={info} />
             ))}
              
         </div>

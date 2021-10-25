@@ -10,7 +10,7 @@ function Repo(props){
 
 return(
 
-  <div key={props.index} className="repo-body" >
+  <div className="repo-body" >
   <div className="repo-body-sub" onClick={Trigger}>
   <div className="main-subitem">
   <div className="repo-name">

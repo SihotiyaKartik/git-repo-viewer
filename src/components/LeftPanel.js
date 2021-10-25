@@ -43,7 +43,7 @@ function LeftPanel(props){
 
     
     return (
-        <div>
+        <div className={props.value ? "left isActive":"left"}>
             <>
             <Repos value={data} leftCallBack={handle} />
             </>
@@ -55,7 +55,8 @@ function LeftPanel(props){
             isOpen={open}
             onRequestClose={closeModal}
             className="react-modal"
-            ariaHideApp={false}>
+            ariaHideApp={false}
+            >
                 <h2>ADD NEW REPOSITORY</h2>    
                 <form>
                 <label htmlFor="name">Owner / Organization</label>    

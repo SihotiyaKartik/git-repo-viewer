@@ -10,7 +10,7 @@ function RightPanel(props) {
     }
 
     return (
-        <div className="right">
+        <div className={props.val ? "right":"right isActive"}>
             <div className="delete">
                 
                 {props.value ? (<p className="delete-repo">{props.value}</p>):(<></>)}

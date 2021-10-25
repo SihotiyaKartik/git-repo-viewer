@@ -9,7 +9,7 @@ function Branches(props) {
         <div className="branches">
             {
             props.value.map((info) => (
-                <Branch value={info} branchesCallBack={handle} />
+                <Branch key={props.value.indexOf(info)} value={info} branchesCallBack={handle} />
             ))
         }
         </div>

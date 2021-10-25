@@ -7,7 +7,7 @@ function Commit(props) {
         <div className="commit">
             <div className="commit-sub">
             <p className="date">{date}</p>
-
+            
             <p className="msg">{props.value.commit.message}</p>            
             </div>
         </div>

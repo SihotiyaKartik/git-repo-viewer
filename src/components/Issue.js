@@ -12,7 +12,10 @@ function Issue(props) {
             
         </div>  
         </div>
+        
+
         </div>
+        
     )
 }
 

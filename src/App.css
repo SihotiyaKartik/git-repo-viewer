@@ -18,7 +18,7 @@ height:7vh;
 .left{
   padding:0;
   height:93vh;
-  border-right: 3px solid black;
+  border-right: 1px solid black;
 }
 
 .right{
@@ -439,5 +439,71 @@ font-size: 20px;
   margin-left:10px;
   font-size: 20px;
 }
+
+.fa-bars{
+  color: white;
+
+  top:calc((7vh - 50px)/2);
+  visibility: hidden;
+  right: 5px;
+}
+
+/* Making responsive */
+@media only screen and (max-width:800px){
+.fa-bars{
+  visibility: visible;
+  position: absolute;
+  top: calc((7vh - 30px)/2);
+  right:10px; 
+}
+
+.head > p{
+  line-height: 3vh;
+}
+
+.main{
+width: 100vw;
+}
+
+.left{
+  width: 100%;
+  height:93vh;
+  position: fixed;
+  left:0;
+  z-index: 0;
+  visibility: hidden;
+}
+
+
+.right{
+width: 100%;
+height:93vh;
+position: fixed;
+left:0;
+visibility: hidden;
+
+}
+
+.isActive{
+  visibility: visible;
+  
+}
+
+.react-modal{
+  z-index: 50000 !important;
+  position:absolute;
+  top:100px;
+  bottom: 100px;
+  left:10%;
+  right:10%;
+  
+}
+
+.delete > p{
+  align-self: center;
+}
+
+}
+
 
 

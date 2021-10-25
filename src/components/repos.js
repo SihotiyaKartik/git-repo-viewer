@@ -14,7 +14,7 @@ function Repos(props){
             {
             props.value.map((info) => (
                 
-                 <Repo index={props.value.indexOf(info)} value={info} reposCallBack={handle} />   
+                 <Repo key={props.value.indexOf(info)} value={info} reposCallBack={handle} />   
                 
             ))
             }

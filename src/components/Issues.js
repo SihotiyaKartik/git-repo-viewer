@@ -4,7 +4,7 @@ function Issues(props) {
     return (
         <div className="issues">
             {props.value.map((info) => (
-                <Issue value={info} />
+                <Issue key={props.value.indexOf(info)} value={info} />
             ))}
         </div>
     )
